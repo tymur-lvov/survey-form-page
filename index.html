@@ -2,8 +2,239 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Survey Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        font-family: Roboto, sans-serif;
+      }
+    </style>
   </head>
-  <body></body>
+  <body style="width: 600px">
+    <h1 id="title">FitTrack Pro App Feedback Survey</h1>
+    <p id="description">
+      Thank you for helping us make FitTrack Pro your ultimate fitness
+      companion!
+    </p>
+    <form id="survey-form">
+      <fieldset>
+        <legend>Personal Information</legend>
+        <label for="name" id="name-label">Name:</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          required
+          placeholder='Ex. "John"'
+        />
+        <br />
+        <br />
+        <label for="email" id="email-label">Email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          placeholder='Ex. "johns@email.com&quot'
+        />
+        <br />
+        <br />
+        <label for="number" id="number-label"
+          >Years using FitTrack Pro (Optional):</label
+        >
+        <input
+          type="number"
+          id="number"
+          name="experience-years"
+          placeholder="1-10"
+          min="1"
+          max="10"
+        />
+      </fieldset>
+      <br />
+      <fieldset>
+        <legend for="dropdown">
+          Which option best describes your primary fitness goal?
+        </legend>
+        <select id="dropdown" name="goal">
+          <option disabled selected>Select a goal</option>
+          <option value="weight-loss-option">Weight Loss</option>
+          <option value="muscle-gain-strength-training-option">
+            Muscle Gain / Strength Training
+          </option>
+          <option value="improve-endurance-cardio-option">
+            Improve Endurance / Cardio
+          </option>
+          <option value="general-health-and-wellness-option">
+            General Health and Wellness
+          </option>
+          <option value="stress-reduction-option">Stress Reduction</option>
+          <option value="other-option">Other</option>
+        </select>
+      </fieldset>
+      <br />
+      <fieldset>
+        <legend>
+          How likely are you to recommend FitTrack Pro to a friend or family
+          member?
+        </legend>
+        <input
+          type="radio"
+          id="extremely-likely-option"
+          name="recommendation"
+          value="extremely-likely"
+          checked
+        />
+        <label for="extremely-likely-option">Extremely Likely</label>
+        <input
+          type="radio"
+          id="likely-option"
+          name="recommendation"
+          value="likely"
+        />
+        <label for="likely-option">Likely</label>
+        <input
+          type="radio"
+          id="neutral-option"
+          name="recommendation"
+          value="neutral"
+        />
+        <label for="neutral-option">Neutral</label>
+        <input
+          type="radio"
+          id="unlikely-option"
+          name="recommendation"
+          value="unlikely"
+        />
+        <label for="unlikely-option">Unlikely</label>
+        <input
+          type="radio"
+          id="extremely-unlikely-option"
+          name="recommendation"
+          value="extremely-unlikely"
+        />
+        <label for="extremely-unlikely-option">Extremely Unlikely</label>
+      </fieldset>
+      <br />
+      <fieldset>
+        <legend>What is your favorite feature of the FitTrack Pro app?</legend>
+        <select id="favorite-feature" name="favorite-feature">
+          <option disabled selected>Select a plan</option>
+          <option value="workout-plans-structured-routines">
+            Workout Plans (Structured Routines)
+          </option>
+          <option value="nutrition-calorie-tracking">
+            Nutrition/Calorie Tracking
+          </option>
+          <option value="progress-visualizations-graphs-charts">
+            Progress Visualizations (Graphs/Charts)
+          </option>
+          <option value="activity-sync-wearable-devices">
+            Activity Sync (Wearable Devices)
+          </option>
+          <option value="guided-meditations-recovery">
+            Guided Meditations/Recovery
+          </option>
+        </select>
+      </fieldset>
+      <br />
+      <fieldset>
+        <legend>
+          What features would you like to see improved or added? (Check all that
+          apply)
+        </legend>
+        <input
+          type="checkbox"
+          id="more-diverse-workout-content-yoga-hiit-etc"
+          name="more-diverse-workout-content-yoga-hiit-etc"
+          value="more-diverse-workout-content-yoga-hiit-etc"
+        />
+        <label for="more-diverse-workout-content-yoga-hiit-etc"
+          >More diverse workout content (Yoga, HIIT, etc.)</label
+        >
+        <br />
+        <input
+          type="checkbox"
+          id="better-community-features-challenges"
+          name="better-community-features-challenges"
+          value="better-community-features-challenges"
+        />
+        <label for="better-community-features-challenges"
+          >Better community features/challenges</label
+        >
+        <br />
+        <input
+          type="checkbox"
+          id="improved-accuracy-in-calorie-tracking"
+          name="improved-accuracy-in-calorie-tracking"
+          value="improved-accuracy-in-calorie-tracking"
+        />
+        <label for="improved-accuracy-in-calorie-tracking"
+          >Improved accuracy in calorie tracking</label
+        >
+        <br />
+        <input
+          type="checkbox"
+          id="more-customizability-in-meal-planning"
+          name="more-customizability-in-meal-planning"
+          value="more-customizability-in-meal-planning"
+        />
+        <label for="more-customizability-in-meal-planning"
+          >More customizability in meal planning</label
+        >
+        <br />
+        <input
+          type="checkbox"
+          id="integration-with-more-devices-apps"
+          name="integration-with-more-devices-apps"
+          value="integration-with-more-devices-apps"
+        />
+        <label for="integration-with-more-devices-apps"
+          >Integration with more devices/apps</label
+        >
+        <br />
+        <input
+          type="checkbox"
+          id="faster-load-times-fewer-bugs"
+          name="faster-load-times-fewer-bugs"
+          value="faster-load-times-fewer-bugs"
+        />
+        <label for="faster-load-times-fewer-bugs"
+          >Faster load times/fewer bugs</label
+        >
+        <br />
+        <input
+          type="checkbox"
+          id="advanced-analytics-for-progress"
+          name="advanced-analytics-for-progress"
+          value="advanced-analytics-for-progress"
+        />
+        <label for="advanced-analytics-for-progress"
+          >Advanced analytics for progress</label
+        >
+        <br />
+        <input
+          type="checkbox"
+          id="personalized-coaching-ai-guidance"
+          name="personalized-coaching-ai-guidance"
+          value="personalized-coaching-ai-guidance"
+        />
+        <label for="personalized-coaching-ai-guidance"
+          >Personalized coaching/AI guidance</label
+        >
+      </fieldset>
+      <br />
+      <fieldset>
+        <legend>Any comments or suggestions for the FitTrack Pro team?</legend>
+        <textarea id="comment" name="comment" cols="40" rows="8"></textarea>
+      </fieldset>
+      <br />
+      <button id="submit" type="submit">Submit</button>
+    </form>
+  </body>
 </html>
